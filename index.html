@@ -5,7 +5,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Produkta - Responsive Product Showcase</title>
+        <title>SqLite</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -27,7 +27,7 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -142,11 +142,12 @@
                         <h5>1. Origine</h5>
                         <p>Le projet SQLite a été conçu le <strong>09/05/2000</strong> par <strong>D. Richard Hipp</strong> qui travaillait pour General Dynamics sur contrat avec la US Navy. Hipp concevait des logiciels utilisés à bord des missiles guidés.</br>
                         Les objectifs de conception de SQLite étaient de permettre à un programme de fonctionner sans installer de système de gestion de base de données ou nécessitant un administrateur de base de données.</p>
-                        <h5>2. Differences from HTML 4.01</h5>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        <h5>3. Main features and examples</h5>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
+                        <h5>2. Le modèle embarqué</h5>
+                        <p>Ce modèle a pour avantage de faire une application indépendante qui intègrera directement le moteur de base de données. Cela permet d’avoir de petites bases de données très performantes car stockées en local, d’éviter des échanges clients serveurs qui peuvent être mal sécurisé tout en restant facile à implémenter.</p>
+                        <h5>3.Architecture</h5>
+                        <p>Son architecture est assez simple. L’application développée devra passer par une API pour accéder au compilateur SQLite.</br>
+                          Le compilateur est composé d’un séquenceur qui se chargera de diviser les commandes données en parties traitables séparément, d’un analyseur syntaxique qui s'occupe de décomposer les requêtes en différents objets et enfin d’un générateur de code qui crée un bytecode.</br>
+                          Le bytecode obtenu est envoyé à La machine virtuelle qui interprète ces instructions. Elle fait ensuite appel au gestionnaire d'arbre B au niveau des ressources qui repose sur des couches de plus bas niveau dont le cache et sa couche d'abstraction.</p>
                     </div>
                 </div>
             </div> <!-- end row -->
@@ -154,7 +155,7 @@
             <div class="row">
                 <!-- as seen on -->
                 <div class="span12 using-this">
-                    <h3>As Seen On</h3>
+                    <h3>Se trouve dans</h3>
                     <div class="using-this-container">
                         <a class="using-this-google" href="#"></a>
                         <a class="using-this-pinterest" href="#"></a>
@@ -170,27 +171,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="span4 from-twitter">
-                        <h3>From Twitter</h3>
-                        <div class="show-tweet"></div>
-                    </div>
-                    <div class="span4 testimonials">
-                        <h3>Testimonials</h3>
-                        <p>" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit. "</p>
-                        <div class="test-author">
-                            <img src="assets/img/testimonials/3.jpg" alt="">
-                            <p><span>Jane Ipsum Doe</span><br>Produkta Inc.</p>
-                        </div>
-                    </div>
-                    <div class="span4 contact-us">
-                        <h3>Contact Us</h3>
-                        <form action="assets/contact.php" method="post">
-                            <input type="text" name="name" class="name" placeholder="Name">
-                            <input type="text" name="email" class="email" placeholder="Email">
-                            <textarea name="message" placeholder="Message"></textarea>
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
+
                 </div> <!-- end row -->
                 <div class="row">
                     <div class="span12">
@@ -210,7 +191,7 @@
                 </div> <!-- end row -->
                 <div class="row">
                     <div class="span12 copyright">
-                        <p>Copyright &copy; 2013 - Produkta - Template by <a href="http://azmind.com" target="_blank">Azmind.com</a></p>
+
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
